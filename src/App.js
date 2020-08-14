@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 //containers
 import Home from './containers/Home';
-// import Programming from './containers/Programming';
+import Programming from './containers/Programming';
 
 class App extends Component {
 
@@ -20,7 +20,7 @@ class App extends Component {
               <Switch>
                 
                 <Route exact path="/" component={Home} />
-                {/* <Route path="/coding" component={Programming} /> */}
+                <Route path="/coding" component={Programming} />
                 <Route render={
                   () => <h3>Oops, we couldn't find this page. Try reverting to Home, homie </h3>
                 }/>
