@@ -19,8 +19,8 @@ function Home() {
     useEffect(() => {
 
         //IMAGES VARS
-        const girlImage = images.firstElementChild;
-        const boyImage = images.lastElementChild;
+        // const girlImage = images.firstElementChild;
+        // const boyImage = images.lastElementChild;
 
         // Content VARS
         const headlineFirst = content.children[0].children[0];
