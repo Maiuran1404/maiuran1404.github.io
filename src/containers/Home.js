@@ -11,7 +11,7 @@ import './Home.scss';
 function Home() {
   
     let app = useRef(null);
-    let images = useRef(null);
+    // let images = useRef(null);
     let content = useRef(null);
     let tl = new TimelineLite({delay: .3})
     let buttons = useRef(null);
