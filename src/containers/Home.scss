@@ -11,43 +11,56 @@ body {
 .hero {
   visibility: visible;
   height: 100vh;
+  display: grid;
   .container {
     width: 1440px;
     min-width: 1440px;
     margin: 0 auto;
+    
     .hero-inner {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
       align-items: center;
       justify-content: space-between;
       margin: 0 24px;
       height: 100vh;
+
       .hero-content {
         width: 50%;
+        padding-left: 30%;
+        
         .hero-content-inner {
           width: 500px;
           color: #323232;
           margin: 0 auto;
           h1 {
-            font-weight: 500;
-            font-size: 32px;
-            margin-bottom: 24px;
             .hero-content-line {
-              margin: 0;
+              margin: 0px;
               height: 44px;
               overflow: hidden;
               .hero-content-line-inner {
+                font-size: 32px;
+                font-weight: 500;
+                margin-bottom: 24px;
               }
-            }
-          }
+              .hero-content-line-inner-second {
+                font-size: 26px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0;
+              }
+            }}
           p {
             font-size: 14px;
             line-height: 24px;
             font-weight: 300;
             padding-right: 48px;
-            margin-bottom: 56px;
+            margin-bottom: 5px;
           }
           .btn-row {
             position: relative;
+            margin: 15px;
             &:before {
               position: absolute;
               width: 56px;
@@ -60,7 +73,6 @@ body {
               background: none;
               border: none;
               font-size: 12px;
-              padding: 0;
               cursor: pointer;
               text-transform: uppercase;
               font-weight: 700;
