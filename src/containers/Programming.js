@@ -132,7 +132,7 @@ function Programming() {
                     <GreyBox 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    ><Apple href="https://www.google.com">
+                    ><Apple href="https://mongodb-digitalbrain.herokuapp.com/">
                         <ProjectTitle > Delta </ProjectTitle>
                         <Desc> A note-taking application with spaced practice algorithm </Desc>
                         <Desc2> Click to see project </Desc2>
@@ -143,9 +143,11 @@ function Programming() {
             <GreyBox2
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}>
+                <Apple href="https://music-bnb.herokuapp.com/">
                 <ProjectTitle>MusicBnB</ProjectTitle>
-                <Desc>A platform to rent out expensive instruments</Desc>
+                <Desc>A platform to rent out expensive instruments (piano, violin etc.) </Desc>
                 <Desc2> Click to see project </Desc2>
+                </Apple>
             </GreyBox2>
         </Container>
     );
