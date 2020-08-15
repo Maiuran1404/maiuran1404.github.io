@@ -12,24 +12,44 @@ const Container = styled.div`
 `
 const Title = styled.div`
     grid-area: Title;
+    margin-left: 8%;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 5%;
 `
 
 
 const GreyBox = styled.div`
-    background: #EAEAEA;
+    background: #FAFAFA;
     width: 50%;
     height: 300%;
     border-radius: 5%;
     padding: 1%;
     align-content: center;
     margin: auto;
+    margin-top: 4%;
 `
 
 const ProjectTitle = styled.div`
-    font-size: 22px;
-    margin-left: 10%;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 15%;
     margin-top: 10%;
     align-content: center;
+`
+
+const Button = styled.a`
+    text-decoration: none;
+    color: black;
+    border: none;
+    background: none;
+    outline:none;
+    grid-area: Title;
+    width: 5%;
+    height: 20%;
+    align-content: center;
+    margin-top: 2%;
+    margin-left: 2%;
 `
 
 
@@ -44,6 +64,7 @@ function Programming() {
         const projectone = project.children[0];
         const projecttwo = project.children[1];
         const projectthree = project.children[2];
+        const projectfour = project.children[3];
 
       //Removing flash
       TweenMax.to(project, 0, {css: {visibility: 'visibile'}})
@@ -61,14 +82,16 @@ function Programming() {
         ease: Power3.easeOut, delay: .2
       }, .10, 'Start')
       .from(projectone, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.4)
-      .from(projecttwo, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.6)
-      .from(projectthree, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.8)
+      .from(projecttwo, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.2)
+      .from(projectthree, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.6)
+      .from(projectfour, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.8)
     
     }, [tl])
     
     return (
         <Container ref={el => project = el}>
             <Title> Coding </Title>
+            <Button href="https://maiuran.com"> Home </Button>
             <GreyBox>
                 <ProjectTitle> Delta.io </ProjectTitle>
             </GreyBox>
