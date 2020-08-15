@@ -115,7 +115,7 @@ function Home() {
                 <button className="explore-button" type="button"
                         onClick={(e) => {
                           e.preventDefault();
-                          window.location.href='/startups';
+                          window.location.href='/skills';
                           }}> 🧠 Skills
                 </button>
               </div>
@@ -123,7 +123,7 @@ function Home() {
                 <button className="explore-button" type="button"
                         onClick={(e) => {
                           e.preventDefault();
-                          window.location.href='/coding';
+                          window.location.href='/story';
                           }}> 🦦 Story
                 </button>
               </div>
