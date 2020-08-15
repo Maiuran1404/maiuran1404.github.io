@@ -75,7 +75,7 @@ function Home() {
             <div className="hero-content-inner" ref={el => content = el}>
                 <h1>
                 <div className="hero-content-line">
-                    <div className="hero-content-line-inner"> Maiuran Loganathan </div>
+                    <div className="hero-content-line-inner"> Maiuran Saturday Loganathan </div>
                 </div>
                 <div className="hero-content-line">
                     <div className="hero-content-line-inner-second"> Effectively building solutions to </div>  
