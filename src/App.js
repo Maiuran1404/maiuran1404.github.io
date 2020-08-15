@@ -7,15 +7,8 @@ import Home from './containers/Home';
 import Programming from './containers/Programming';
 
 class App extends Component {
-
-
-    render(){
-
-    
+    render(){    
     return (
-      
-
-        
           <Router>
               <Switch>
                 
