@@ -14,7 +14,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "sass": "^1.26.10",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
