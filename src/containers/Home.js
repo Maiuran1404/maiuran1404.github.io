@@ -9,23 +9,6 @@ import styled from 'styled-components';
 // import arrow from '../images/arrow-right.svg';
 // import imgGirl from './images/girl.webp';
 // import imgBoy from './images/boy.webp';
-let easing = [0.6, -0.05, 0.01, 0.99];
-
-const fadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 0,
-    transition: { duration: 0.6, ease: easing }
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing
-    }
-  }
-};
 
 const Image = styled(motion.img)`
   margin-left: 70%;
