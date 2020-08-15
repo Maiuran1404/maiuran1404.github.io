@@ -13,8 +13,8 @@ body {
   height: 100vh;
   display: grid;
   .container {
-    width: 1440px;
-    min-width: 1440px;
+    // width: 1440px;
+    // min-width: 1440px;
     margin: 0 auto;
     
     .hero-inner {
@@ -33,7 +33,7 @@ body {
         padding-left: 30%;
         
         .hero-content-inner {
-          width: 500px;
+          width: 160%;
           color: #323232;
           margin: 0 auto;
           h1 {
