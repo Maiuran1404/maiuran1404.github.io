@@ -107,7 +107,7 @@ function Home() {
                 <button className="explore-button" type="button"
                         onClick={(e) => {
                           e.preventDefault();
-                          window.location.href='/coding';
+                          window.location.href='/projects';
                           }}> 👨🏽‍💻 Projects
                 </button>
               </div>
