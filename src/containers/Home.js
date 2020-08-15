@@ -87,6 +87,8 @@ function Home() {
                 <p> Full stack: MERN stack, Firebase + MongoDb, React, Gsap </p>
                 <p> Mobile: React Native + Swift </p>
                 <p> UI/UX: Figma, Sketch </p>
+                <h3>Tools</h3>
+                <p> UI/UX: Figma, Sketch </p>
                 <br/>
                 
                 </div>

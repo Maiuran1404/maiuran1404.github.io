@@ -4,7 +4,7 @@ class Programming extends Component {
     render() {
         return (
             <div>
-                <h1> Progamming </h1>
+                <h1> Coding </h1>
             </div>
         )
     }
