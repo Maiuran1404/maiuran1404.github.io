@@ -26,6 +26,9 @@ body {
       margin: 0 24px;
       height: 100vh;
       margin-left: 15%;
+      @media (max-width: 800px) {
+        margin-left: 1%;
+    }
       gap: 10% 0%;
 
       .hero-content {
