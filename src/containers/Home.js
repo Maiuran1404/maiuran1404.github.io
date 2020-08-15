@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {TweenMax, TimelineLite, Power3} from 'gsap';
 import './Home.scss';
 import { motion } from "framer-motion";
-import Mayoo from './mayoo.png'
+// import Mayoo from './mayoo.png'
 import styled from 'styled-components';
 
 //Assets
@@ -10,9 +10,9 @@ import styled from 'styled-components';
 // import imgGirl from './images/girl.webp';
 // import imgBoy from './images/boy.webp';
 
-const Image = styled(motion.img)`
-  margin-left: 70%;
-`
+// const Image = styled(motion.img)`
+//   margin-left: 70%;
+// `
 
 function Home() {
   
@@ -83,7 +83,7 @@ function Home() {
             <div className="hero-content-inner" ref={el => content = el}>
                 <h1>
                 <div className="hero-content-line">
-                    <div className="hero-content-line-inner"> Maiuran Loganathan </div>
+                    <div className="hero-content-line-inner"> 👋 Maiuran Loganathan </div>
                 </div>
                 <div>
                 </div>
