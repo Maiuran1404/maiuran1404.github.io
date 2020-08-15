@@ -103,7 +103,7 @@ function Home() {
                         onClick={(e) => {
                           e.preventDefault();
                           window.location.href='/coding';
-                          }}> Coding
+                          }}> Projects
                 </button>
               </div>
               <div className="btn-row">
@@ -111,7 +111,7 @@ function Home() {
                         onClick={(e) => {
                           e.preventDefault();
                           window.location.href='/startups';
-                          }}> CV stuff
+                          }}> Skills
                 </button>
               </div>
               <div className="btn-row">
@@ -119,7 +119,7 @@ function Home() {
                         onClick={(e) => {
                           e.preventDefault();
                           window.location.href='/coding';
-                          }}> My story
+                          }}> Story
                 </button>
               </div>
         </div>
