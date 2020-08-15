@@ -119,14 +119,14 @@ function Home() {
                           }}> 🧠 Skills
                 </button>
               </div>
-              <div className="btn-row">
+              {/* <div className="btn-row">
                 <button className="explore-button" type="button"
                         onClick={(e) => {
                           e.preventDefault();
                           window.location.href='/story';
                           }}> 🦦 Story
                 </button>
-              </div>
+              </div> */}
         </div>
         </div>
         </div>

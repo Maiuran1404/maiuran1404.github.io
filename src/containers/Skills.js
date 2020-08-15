@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const Container = styled(motion.div)`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 10% 18%;
-    grid-template-areas: "Title Title Title" "Content1 Content2 . ";
+    grid-template-areas: "Title Title Title Title" "Pro1 Pro2 Pro3 ." ". . . .";
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
 const Title = styled.div`
@@ -34,7 +34,7 @@ const GreyBox = styled(motion.div)`
     margin-left: 30%;
     margin-top: 0%;
     &:hover{
-        cursor:pointer;
+        /* cursor:pointer; */
     }
 `
 
@@ -49,7 +49,23 @@ const GreyBox2 = styled(motion.div)`
     margin-left: 30%;
     margin-top: 0%;
     &:hover{
-        cursor:pointer;
+        /* cursor:pointer; */
+        
+    }
+`
+
+const GreyBox3 = styled(motion.div)`
+    grid-area: Content3;
+    background: #FAFAFA;
+    width: 150%;
+    height: 120%;
+    border-radius: 10%;
+    padding: 0%;
+    align-content: left;
+    margin-left: 30%;
+    margin-top: 0%;
+    &:hover{
+        /* cursor:pointer; */
         
     }
 `
@@ -78,7 +94,10 @@ const Button = styled.a`
 
 const Desc = styled.p`
     margin-left: 20%;
+    margin-top: 0;
     font-weight: 10;
+    font-size: 14px;
+    
 `
 
 const Desc2 = styled.p`
@@ -89,6 +108,21 @@ const Desc2 = styled.p`
 const Apple = styled.a`
     text-decoration: none;
     color: black;
+`
+
+const Pro1 = styled.div`
+     grid-area: Pro1;
+     width: 200%;
+`
+
+const Pro2 = styled.div`
+     grid-area: Pro2;
+     width: 200%;
+`
+
+const Pro3 = styled.div`
+     grid-area: Pro3;
+     width: 200%;
 `
 
 function Programming() {
@@ -103,6 +137,7 @@ function Programming() {
         const projecttwo = project.children[1];
         const projectthree = project.children[2];
         const projectfour = project.children[3];
+        const projectfive = project.children[4];
 
       //Removing flash
       TweenMax.to(project, 0, {css: {visibility: 'visibile'}})
@@ -123,6 +158,7 @@ function Programming() {
       .from(projecttwo, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.2)
       .from(projectthree, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.4)
       .from(projectfour, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.5)
+      .from(projectfive, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.6)
     
     }, [tl])
     
@@ -130,28 +166,29 @@ function Programming() {
         <Container ref={el => project = el} initial='initial' animate='animate' exit={{ opacity: 0 }}>
             <Title> Skills </Title>
             <Button href="https://www.maiuran.com"> Home </Button>
+            <Pro1>
+            <ProjectTitle>Product Development</ProjectTitle>
+                <br/>
+                <Desc> Full-stack: MERN stack (MongoDB, Firebase, AWS) </Desc>
+                <Desc> Mobile: React Native + Swift </Desc>
+                <Desc> UI / UX: Figma + Sketch </Desc>
+            </Pro1>
+            <Pro2>
+            <ProjectTitle>Business Strategy</ProjectTitle>
+                <br/>
+                <Desc> Open-source white paper with DoLittle / Wilhemsen (Norway's largest shipping company) </Desc>
+                <Desc> Strategy for cutting-edge tech with BA-HR (Norway's leading law firm)  </Desc>
+                
+            </Pro2>
+            <Pro3>
+            <ProjectTitle>Public Speaking</ProjectTitle>
+                <br/>
+                <Desc> Norway's largest corporate conference for PM, Crown Prince and 1'200 executives (NHO Oslo, 2017) </Desc>
+                <Desc> World's largest educational tech conference (BETT London 2016) </Desc>
+                <Desc> World's largest real-estate conference (MIPIM Cannes, 2017) </Desc>
+            </Pro3>
 
-                
-                    <GreyBox 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    ><Apple href="https://mongodb-digitalbrain.herokuapp.com/">
-                        <ProjectTitle > Delta </ProjectTitle>
-                        <Desc> A note-taking application with spaced practice algorithm </Desc>
-                        <Desc2> Click to see project </Desc2>
-                        </Apple>
-                    </GreyBox>
-                
-                
-            <GreyBox2
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}>
-                <Apple href="https://music-bnb.herokuapp.com/">
-                <ProjectTitle>MusicBnB</ProjectTitle>
-                <Desc>A platform to rent out expensive instruments (piano, violin etc.) </Desc>
-                <Desc2> Click to see project </Desc2>
-                </Apple>
-            </GreyBox2>
+
         </Container>
     );
 }
