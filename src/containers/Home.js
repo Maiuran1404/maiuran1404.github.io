@@ -88,14 +88,14 @@ function Home() {
                 <div>
                 </div>
                 </h1>
-                <p> I'm a full-stack developer and serial-entrepreneur from Oslo, Norway. I just graduated from <a href="https://www.minerva.kgi.edu"> Minerva Schools</a> studying Venture Initiation, CS and Philosophy. </p>
-                <p> I am currently obsessed with becoming the fastest prototyper I can become, and improving my feedback-iteration time. </p>
-                <p> On my freetime I run ultramarathons, play the piano and watch motivational clips of Kobe Bryant. </p>
-                <br/>
+                <p> I'm a full-stack developer 👨🏽‍💻 and serial-entrepreneur from Oslo, Norway 🏔. I just graduated from <a href="https://www.minerva.kgi.edu"> Minerva Schools</a> studying Venture Initiation, CS and Philosophy. 🎓</p>
+                <p> I am currently obsessed with becoming the fastest prototyper I can become, and improving my feedback-iteration time. 🤖 </p>
+                <p> On my freetime I run ultramarathons 🏃🏽‍♂️, play the piano and watch motivational clips of Kobe Bryant 🙏. </p>
+                {/* <br/> */}
                 <p> You can find me on <a href="https://www.linkedin.com/in/maiuran-loganathan-472ba893/">LinkedIn</a>, <a href="https://github.com/Maiuran1404">GitHub</a> or <a href="https://www.youtube.com/channel/UCXoV5_-c5bx8SLDyHk3eJqQ/featured">Youtube</a> </p>
-                <Image 
+                {/* <Image 
                     src={Mayoo} width={150}
-                    /> 
+                    />  */}
                 <br/>
                 
                 </div>
@@ -108,15 +108,15 @@ function Home() {
                         onClick={(e) => {
                           e.preventDefault();
                           window.location.href='/coding';
-                          }}> Projects
+                          }}> 👨🏽‍💻 Projects
                 </button>
               </div>
-              {/* <div className="btn-row">
+              <div className="btn-row">
                 <button className="explore-button" type="button"
                         onClick={(e) => {
                           e.preventDefault();
                           window.location.href='/startups';
-                          }}> Skills
+                          }}> 🧠 Skills
                 </button>
               </div>
               <div className="btn-row">
@@ -124,9 +124,9 @@ function Home() {
                         onClick={(e) => {
                           e.preventDefault();
                           window.location.href='/coding';
-                          }}> Story
+                          }}> 🦦 Story
                 </button>
-              </div> */}
+              </div>
         </div>
         </div>
         </div>
