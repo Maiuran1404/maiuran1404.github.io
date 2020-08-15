@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import {TweenMax, TimelineLite, Power3} from 'gsap';
 import './Home.scss';
+import { motion } from "framer-motion";
 
 //Assets
 // import arrow from '../images/arrow-right.svg';
@@ -68,8 +69,10 @@ function Home() {
     }, [tl])
 
   return (
-    <div className="hero" ref={el => app = el}>
-      <div className="container">
+    <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }} className="hero" ref={el => app = el}>
+      <motion.div className="container"
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}>
         <div className="hero-inner">
           <div className="hero-content">
             <div className="hero-content-inner" ref={el => content = el}>
@@ -122,8 +125,8 @@ function Home() {
         </div>
         </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

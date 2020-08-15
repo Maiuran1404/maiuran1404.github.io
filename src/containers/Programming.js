@@ -1,38 +1,59 @@
 import React, {useRef, useEffect} from 'react';
 import {TweenMax, TimelineLite, Power3} from 'gsap';
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1px 1px;
-    grid-template-areas: "Title Title" ". .";
+    gap: 10% 18%;
+    grid-template-areas: "Title Title Title" "Content1 Content2 . ";
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
 const Title = styled.div`
     grid-area: Title;
-    margin-left: 8%;
-    font-size: 32px;
+    margin-left: 5.5%;
+    font-size: 24px;
     font-weight: 500;
-    margin-top: 5%;
+    margin-top: 2%;
 `
 
 
-const GreyBox = styled.div`
+const GreyBox = styled(motion.div)`
+    grid-area: Content1;
     background: #FAFAFA;
-    width: 50%;
-    height: 300%;
-    border-radius: 5%;
-    padding: 1%;
+    width: 150%;
+    height: 120%;
+    border-radius: 10%;
+    padding: 0%;
     align-content: center;
-    margin: auto;
-    margin-top: 4%;
+    margin-left: 30%;
+    margin-top: 0%;
+    &:hover{
+        cursor:pointer;
+    }
+`
+
+const GreyBox2 = styled(motion.div)`
+    grid-area: Content2;
+    background: #FAFAFA;
+    width: 150%;
+    height: 120%;
+    border-radius: 10%;
+    padding: 0%;
+    align-content: left;
+    margin-left: 30%;
+    margin-top: 0%;
+    &:hover{
+        cursor:pointer;
+        
+    }
 `
 
 const ProjectTitle = styled.div`
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 15%;
     margin-top: 10%;
     align-content: center;
@@ -46,12 +67,26 @@ const Button = styled.a`
     outline:none;
     grid-area: Title;
     width: 5%;
-    height: 20%;
+    height: 10%;
     align-content: center;
     margin-top: 2%;
     margin-left: 2%;
 `
 
+const Desc = styled.p`
+    margin-left: 20%;
+    font-weight: 10;
+`
+
+const Desc2 = styled.p`
+    margin-left: 20%;
+    font-weight: 10;
+    font-size: 12px;
+`
+const Apple = styled.a`
+    text-decoration: none;
+    color: black;
+`
 
 function Programming() {
     let project = useRef(null);
@@ -83,21 +118,35 @@ function Programming() {
       }, .10, 'Start')
       .from(projectone, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.4)
       .from(projecttwo, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.2)
-      .from(projectthree, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.6)
-      .from(projectfour, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.8)
+      .from(projectthree, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.4)
+      .from(projectfour, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.5)
     
     }, [tl])
     
     return (
-        <Container ref={el => project = el}>
+        <Container ref={el => project = el} initial='initial' animate='animate' exit={{ opacity: 0 }}>
             <Title> Coding </Title>
-            <Button href="https://maiuran.com"> Home </Button>
-            <GreyBox>
-                <ProjectTitle> Delta.io </ProjectTitle>
-            </GreyBox>
-            <GreyBox>
+            <Button href="https://www.maiuran.com"> Home </Button>
+
+                
+                    <GreyBox 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    ><Apple href="https://www.google.com">
+                        <ProjectTitle > Delta </ProjectTitle>
+                        <Desc> A note-taking application with spaced practice algorithm </Desc>
+                        <Desc2> Click to see project </Desc2>
+                        </Apple>
+                    </GreyBox>
+                
+                
+            <GreyBox2
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}>
                 <ProjectTitle>MusicBnB</ProjectTitle>
-            </GreyBox>
+                <Desc>A platform to rent out expensive instruments</Desc>
+                <Desc2> Click to see project </Desc2>
+            </GreyBox2>
         </Container>
     );
 }
