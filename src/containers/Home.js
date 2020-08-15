@@ -2,12 +2,34 @@ import React, {useRef, useEffect} from 'react';
 import {TweenMax, TimelineLite, Power3} from 'gsap';
 import './Home.scss';
 import { motion } from "framer-motion";
+import Mayoo from './mayoo.png'
+import styled from 'styled-components';
 
 //Assets
 // import arrow from '../images/arrow-right.svg';
 // import imgGirl from './images/girl.webp';
 // import imgBoy from './images/boy.webp';
+let easing = [0.6, -0.05, 0.01, 0.99];
 
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing }
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing
+    }
+  }
+};
+
+const Image = styled(motion.img)`
+  margin-left: 70%;
+`
 
 function Home() {
   
@@ -25,8 +47,8 @@ function Home() {
 
         // Content VARS
         const headlineFirst = content.children[0].children[0];
-        const headlineSecond = headlineFirst.nextSibling;
-        const headlineThird = headlineSecond.nextSibling;
+        // const headlineSecond = headlineFirst.nextSibling;
+        // const headlineThird = headlineSecond.nextSibling;
         const contentone = content.children[1];
         const contenttwo = content.children[2];
         const contentthree = content.children[3];
@@ -51,12 +73,12 @@ function Home() {
       
 
       //Content Animation
-      tl.staggerFrom([headlineFirst.children, headlineSecond.children, headlineThird.children], 1, {
+      tl.staggerFrom([headlineFirst.children], 1, {
         y: 44,
         ease: Power3.easeOut, delay: .2
       }, .10, 'Start')
-      .from(contentone, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.4)
-      .from(contenttwo, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.5)
+      .from(contentone, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.0)
+      .from(contenttwo, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.2)
       .from(contentthree, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.6)
       .from(contentfour, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.7)
       .from(contentfive, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.8)
@@ -80,21 +102,21 @@ function Home() {
                 <div className="hero-content-line">
                     <div className="hero-content-line-inner"> Maiuran Loganathan </div>
                 </div>
-                <div className="hero-content-line">
-                    <div className="hero-content-line-inner-second"> Effectively building solutions to </div>  
-                </div>
-                <div className="hero-content-line">
-                    <div className="hero-content-line-inner-second"> meaningful challenges </div>
+                <div>
                 </div>
                 </h1>
-                <p> Full stack: MERN stack, Firebase + MongoDb, React, Gsap </p>
-                <p> Mobile: React Native + Swift </p>
-                <p> UI/UX: Figma, Sketch </p>
-                <h3>Tools</h3>
-                <p> UI/UX: Figma, Sketch </p>
+                <p> I'm a full-stack developer and serial-entrepreneur from Oslo, Norway. I just graduated from <a href="https://www.minerva.kgi.edu"> Minerva Schools</a> studying Venture Initiation, CS and Philosophy. </p>
+                <p> I am currently obsessed with becoming the fastest prototyper I can become, and improving my feedback-iteration time. </p>
+                <p> On my freetime I run ultramarathons, play the piano and watch motivational clips of Kobe Bryant. </p>
+                <br/>
+                <p> You can find me on <a href="https://www.linkedin.com/in/maiuran-loganathan-472ba893/">LinkedIn</a>, <a href="https://github.com/Maiuran1404">GitHub</a> or <a href="https://www.youtube.com/channel/UCXoV5_-c5bx8SLDyHk3eJqQ/featured">Youtube</a> </p>
+                <Image 
+                    src={Mayoo} width={150}
+                    /> 
                 <br/>
                 
                 </div>
+
             </div>
         <div className="hero-content"  >
         <div className="hero-content-inner" ref={el => buttons = el}>
@@ -106,7 +128,7 @@ function Home() {
                           }}> Projects
                 </button>
               </div>
-              <div className="btn-row">
+              {/* <div className="btn-row">
                 <button className="explore-button" type="button"
                         onClick={(e) => {
                           e.preventDefault();
@@ -121,7 +143,7 @@ function Home() {
                           window.location.href='/coding';
                           }}> Story
                 </button>
-              </div>
+              </div> */}
         </div>
         </div>
         </div>
