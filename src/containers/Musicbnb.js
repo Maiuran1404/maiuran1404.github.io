@@ -2,17 +2,23 @@ import React, {useRef, useEffect} from 'react';
 import {TweenMax, TimelineLite, Power3} from 'gsap';
 import styled from 'styled-components';
 import { motion } from "framer-motion";
+import Site3 from './Site3.png';
+
 
 const Container = styled(motion.div)`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10% 18%;
-    grid-template-areas: "Title Title Title" "Content1 Content2 . ";
+    color: black;
+    background: #2A2A39;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* gap: 10% 18%; */
+    grid-template-areas: "Title Title" "Content1  Content2" "Content3 Content3" "Content4 Content4";
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
 const Title = styled.div`
     grid-area: Title;
+    color: white;
     margin-left: 5.5%;
     font-size: 24px;
     font-weight: 500;
@@ -25,46 +31,31 @@ const Title = styled.div`
 
 const GreyBox = styled(motion.div)`
     grid-area: Content1;
-    background: #FAFAFA;
-    width: 150%;
+    background: #FFF;
+    width: 100%;
     height: 120%;
-    border-radius: 10%;
     padding: 0%;
-    align-content: center;
-    margin-left: 30%;
+    
+    margin-left: 0%;
     margin-top: 0%;
     &:hover{
         cursor:pointer;
-    }
-`
-
-const GreyBox2 = styled(motion.div)`
-    grid-area: Content2;
-    background: #FAFAFA;
-    width: 150%;
-    height: 120%;
-    border-radius: 10%;
-    padding: 0%;
-    align-content: left;
-    margin-left: 30%;
-    margin-top: 0%;
-    &:hover{
-        cursor:pointer;
-        
     }
 `
 
 const ProjectTitle = styled.div`
-    font-size: 18px;
+    color: black;
+    font-size: 20px;
     font-weight: 400;
     margin-left: 15%;
-    margin-top: 10%;
-    align-content: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    align-content: left;
 `
 
 const Button = styled.a`
+    color: white;
     text-decoration: none;
-    color: black;
     border: none;
     background: none;
     outline:none;
@@ -77,11 +68,18 @@ const Button = styled.a`
 `
 
 const Desc = styled.p`
-    margin-left: 20%;
-    font-weight: 10;
+    margin-left: 15%;
+    margin-top: 0%;
+    font-weight: 100;
+    font-size: 16px;
+    padding: 0;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 1%;
 `
 
 const Desc2 = styled.p`
+    color: black;
     margin-left: 20%;
     font-weight: 10;
     font-size: 12px;
@@ -89,6 +87,45 @@ const Desc2 = styled.p`
 const Apple = styled.a`
     text-decoration: none;
     color: black;
+`
+
+const PartOne = styled.div`
+    grid-area: Content1;
+    background: white;
+    color: black;
+`
+
+const PartTwo = styled.div`
+    grid-area: Content2;
+    background: white;
+    color: black;
+    padding-bottom: 5%;
+`
+
+const PartThree = styled.div`
+    grid-area: Content3;
+    background: white;
+    
+`
+
+const PartFour = styled.div`
+    grid-area: Content4;
+    background: white;
+`
+
+const Image = styled(motion.img)`
+  margin-left: 25%;
+`
+
+const DescLink = styled.p`
+    margin-left: 15%;
+    margin-top: 0%;
+    font-weight: 100;
+    font-size: 16px;
+    padding: 0;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 1%;
 `
 
 function Programming() {
@@ -121,27 +158,44 @@ function Programming() {
       }, .10, 'Start')
       .from(projectone, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.4)
       .from(projecttwo, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.2)
-      .from(projectthree, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.4)
-      .from(projectfour, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.5)
+    //   .from(projectthree, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.4)
+    //   .from(projectfour, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 0.5)
     
     }, [tl])
     
     return (
         <Container ref={el => project = el} initial='initial' animate='animate' exit={{ opacity: 0 }}>
-            <Title> MusicBnB </Title>
-            <Button href="https://www.maiuran.com"> Home </Button>
+            <Title> MusicBnb </Title>
+            <Button href="https://www.maiuran.com/projects"> Project </Button>
 
+            <PartOne>
+                <ProjectTitle>Project Vision</ProjectTitle>
+                <Desc> AirBnB for music instruments; MusicBnB is a peer-to-peer marketplace where owners of expensive music instruments (piano, violin etc) can rent out their room 
+                    with the instrument for x hours to people who want to play.   </Desc>
+            </PartOne>
+            
+            <PartTwo>
+                <ProjectTitle> Challenges </ProjectTitle>
+                <Desc> 1. Structure offers with searchable tags </Desc>
+                <Desc> 2. Make an intuitive user experience </Desc>
+                <Desc> 3. Create interactive pricing based on add-ons </Desc>
+            </PartTwo>
+
+            <PartThree>
+                <Image src={Site3} width={600} />
                 
-            <GreyBox 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            ><Apple href="https://mongodb-digitalbrain.herokuapp.com/">
-                <ProjectTitle > MusicBnbB </ProjectTitle>
-                <Desc> Project </Desc>
-                <Desc2> Click to see project </Desc2>
-                </Apple>
-            </GreyBox>
-                
+            </PartThree>
+            
+            <PartFour> 
+                    <br/><br/><br/>
+                    <GreyBox 
+                    whileTap={{ scale: 0.95 }}
+                    ><Apple href="https://music-bnb.herokuapp.com/">
+                        <DescLink> Link to Project </DescLink>
+                        </Apple>
+                    </GreyBox>
+                    <br/>
+            </PartFour>
                 
         </Container>
     );
