@@ -148,7 +148,7 @@ function Programming() {
     return (
         <Container ref={el => project = el} initial='initial' animate='animate' exit={{ opacity: 0 }}>
             <Title> Delta </Title>
-            <Button href="https://www.maiuran.com"> Home </Button>
+            <Button href="https://www.maiuran.com/projects"> Project </Button>
 
             <PartOne>
                 <h3>Project Vision</h3>
