@@ -7,7 +7,8 @@ import Home from './containers/Home';
 import Programming from './containers/Programming';
 import Skills from './containers/Skills';
 import Story from './containers/Story';
-
+import Delta from './containers/Delta';
+import Musicbnb from './containers/Musicbnb';
 
 class App extends Component {
     render(){    
@@ -17,6 +18,8 @@ class App extends Component {
                 
                 <Route exact path="/" component={Home} />
                 <Route path="/projects" component={Programming} />
+                <Route path="/delta" component={Delta} />
+                <Route path="/musicbnb" component={Musicbnb} />
                 <Route path="/skills" component={Skills} />
                 <Route path="/story" component={Story} />
                 <Route render={

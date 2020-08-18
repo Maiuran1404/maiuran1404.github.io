@@ -25,12 +25,12 @@ const Title = styled.div`
 
 const GreyBox = styled(motion.div)`
     grid-area: Content1;
-    background: #2A2A39;
+    background: #FAFAFA;
     width: 150%;
     height: 120%;
-    border-radius: 2%;
+    border-radius: 10%;
     padding: 0%;
-    
+    align-content: center;
     margin-left: 30%;
     margin-top: 0%;
     &:hover{
@@ -40,12 +40,12 @@ const GreyBox = styled(motion.div)`
 
 const GreyBox2 = styled(motion.div)`
     grid-area: Content2;
-    background: #816EA7;
+    background: #FAFAFA;
     width: 150%;
     height: 120%;
-    border-radius: 2%;
+    border-radius: 10%;
     padding: 0%;
-    
+    align-content: left;
     margin-left: 30%;
     margin-top: 0%;
     &:hover{
@@ -55,7 +55,6 @@ const GreyBox2 = styled(motion.div)`
 `
 
 const ProjectTitle = styled.div`
-    color: white;
     font-size: 18px;
     font-weight: 400;
     margin-left: 15%;
@@ -78,13 +77,11 @@ const Button = styled.a`
 `
 
 const Desc = styled.p`
-    color: white;
     margin-left: 20%;
     font-weight: 10;
 `
 
 const Desc2 = styled.p`
-    color: white;
     margin-left: 20%;
     font-weight: 10;
     font-size: 12px;
@@ -131,30 +128,21 @@ function Programming() {
     
     return (
         <Container ref={el => project = el} initial='initial' animate='animate' exit={{ opacity: 0 }}>
-            <Title> Projects </Title>
+            <Title> MusicBnB </Title>
             <Button href="https://www.maiuran.com"> Home </Button>
 
                 
-                    <GreyBox 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    ><Apple href="/delta">
-                        <ProjectTitle > Delta </ProjectTitle>
-                        <Desc> A note-taking application with spaced practice algorithm </Desc>
-                        <Desc2> Click to see project </Desc2>
-                        </Apple>
-                    </GreyBox>
-                
-                
-            <GreyBox2
+            <GreyBox 
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}>
-                <Apple href="/musicbnb">
-                <ProjectTitle>MusicBnB</ProjectTitle>
-                <Desc>A platform to rent out expensive instruments (piano, violin etc.) </Desc>
+            whileTap={{ scale: 0.95 }}
+            ><Apple href="https://mongodb-digitalbrain.herokuapp.com/">
+                <ProjectTitle > MusicBnbB </ProjectTitle>
+                <Desc> Project </Desc>
                 <Desc2> Click to see project </Desc2>
                 </Apple>
-            </GreyBox2>
+            </GreyBox>
+                
+                
         </Container>
     );
 }
