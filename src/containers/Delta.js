@@ -45,11 +45,12 @@ const GreyBox = styled(motion.div)`
 
 const ProjectTitle = styled.div`
     color: black;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     margin-left: 15%;
-    margin-top: 10%;
-    align-content: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    align-content: left;
 `
 
 const Button = styled.a`
@@ -67,9 +68,14 @@ const Button = styled.a`
 `
 
 const Desc = styled.p`
-    margin-left: 20%;
-    font-weight: 10;
+    margin-left: 15%;
+    margin-top: 0%;
+    font-weight: 100;
+    font-size: 16px;
+    padding: 0;
     color: black;
+    margin-top: 0;
+    margin-bottom: 1%;
 `
 
 const Desc2 = styled.p`
@@ -93,11 +99,13 @@ const PartTwo = styled.div`
     grid-area: Content2;
     background: white;
     color: black;
+    padding-bottom: 5%;
 `
 
 const PartThree = styled.div`
     grid-area: Content3;
     background: white;
+    
 `
 
 const PartFour = styled.div`
@@ -109,6 +117,16 @@ const Image = styled(motion.img)`
   margin-left: 10%;
 `
 
+const DescLink = styled.p`
+    margin-left: 15%;
+    margin-top: 0%;
+    font-weight: 100;
+    font-size: 16px;
+    padding: 0;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 1%;
+`
 
 function Programming() {
     let project = useRef(null);
@@ -151,16 +169,16 @@ function Programming() {
             <Button href="https://www.maiuran.com/projects"> Project </Button>
 
             <PartOne>
-                <h3>Project Vision</h3>
-                <p> Delta is a note-taking and reviewing platform based on spaced practice. Each note is limited to a tweet size and
-                    is shown to you at set time intervals to maximise knowledge retention.  </p>
+                <ProjectTitle>Project Vision</ProjectTitle>
+                <Desc> Delta is a note-taking and reviewing platform based on spaced practice. Each note is limited to a tweet size and
+                    is shown to you at set time intervals to maximise knowledge retention.  </Desc>
             </PartOne>
             
             <PartTwo>
-            <h3> Challenges: </h3>
-                <p> 1. Build efficient data structure for Topics -> Subtopics -> Notes </p>
-                <p> 2. Create an intuitive User Experience </p>
-                <p> 3. Build an algorithm to show notes at set time intervals (from Spaced Practice) </p>
+                <ProjectTitle> Challenges </ProjectTitle>
+                <Desc> 1. Build efficient data structure for Topics -> Subtopics -> Notes </Desc>
+                <Desc> 2. Create an intuitive User Experience </Desc>
+                <Desc> 3. Build an algorithm to show notes at set time intervals (from Spaced Practice) </Desc>
             </PartTwo>
 
             <PartThree>
@@ -168,8 +186,15 @@ function Programming() {
                 <Image src={Site2} width={450} />
             </PartThree>
             
-            <PartFour>
-                    <p> Link to project  </p>
+            <PartFour> 
+                    <br/><br/><br/>
+                    <GreyBox 
+                    whileTap={{ scale: 0.95 }}
+                    ><Apple href="https://mongodb-digitalbrain.herokuapp.com/">
+                        <DescLink> Link to Project </DescLink>
+                        </Apple>
+                    </GreyBox>
+                    <br/>
             </PartFour>
                 
         </Container>
